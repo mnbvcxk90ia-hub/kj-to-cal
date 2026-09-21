@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic Meta -->
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        kJ to Cal Calculator - Convert Kilojoules to Calories
+    </title>
+
+    <meta
+        name="description"
+        content="Use our free kJ to Cal Calculator to convert kilojoules to Calories (kcal) instantly. Get accurate results, formulas, examples, and a quick conversion table."
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="theme-color"
+        content="#176b4d"
+    >
+
+    <!-- Stylesheet -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <!-- Canonical will be added after the new custom domain is confirmed -->
+
+
+    <!-- Open Graph -->
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:title"
+        content="kJ to Cal Calculator - Convert Kilojoules to Calories"
+    >
+
+    <meta
+        property="og:description"
+        content="Convert kilojoules to Calories (kcal) instantly with our free kJ to Cal Calculator."
+    >
+
+    <meta
+        property="og:site_name"
+        content="kJ to Cal Calculator"
+    >
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "kJ to Cal Calculator",
+        "description": "A free online calculator for converting kilojoules to Calories (kilocalories).",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+
+    </script>
+
+</head>
+
+
+<body>
+
+
+    <!-- ============================= -->
+    <!-- HEADER -->
+    <!-- ============================= -->
+
+    <header class="site-header">
+
+        <div class="container header-inner">
+
+            <a
+                href="#calculator"
+                class="logo"
+            >
+                kJ to Cal
+            </a>
+
+
+            <nav
+                class="main-nav"
+                aria-label="Main navigation"
+            >
+
+                <a href="#calculator">
+                    Calculator
+                </a>
+
+                <a href="#formula">
+                    Formula
+                </a>
+
+                <a href="#table">
+                    Conversion Table
+                </a>
+
+                <a href="#faq">
+                    FAQ
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ============================= -->
+    <!-- MAIN -->
+    <!-- ============================= -->
+
+    <main>
+
+
+        <!-- ============================= -->
+        <!-- HERO SECTION -->
+        <!-- ============================= -->
+
+        <section class="hero">
+
+            <div class="container hero-content">
+
+                <p class="eyebrow">
+                    FREE ENERGY CONVERTER
+                </p>
+
+
+                <h1>
+                    kJ to Cal Calculator
+                </h1>
+
+
+                <p class="hero-description">
+
+                    Convert kilojoules (kJ) to Calories (kcal)
+                    instantly. Enter your energy value below
+                    and get an accurate result in seconds.
+
+                </p>
+
+
+                <a
+                    href="#calculator"
+                    class="hero-button"
+                >
+                    Use Calculator
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- CALCULATOR SECTION -->
+        <!-- ============================= -->
+
+        <section
+            class="calculator-section"
+            id="calculator"
+        >
+
+            <div class="container calculator-grid">
+
+
+                <!-- Calculator Card -->
+
+                <div class="calculator-card">
+
+
+                    <div class="card-header">
+
+
+                        <div class="icon-box">
+                            kJ
+                        </div>
+
+
+                        <div>
+
+                            <h2>
+                                Convert Kilojoules to Calories
+                            </h2>
+
+                            <p>
+                                Enter your energy value below.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <form id="converterForm">
+
+
+                        <div class="form-group">
+
+                            <label for="kjInput">
+
+                                Kilojoules (kJ)
+
+                            </label>
+
+
+                            <div class="input-wrapper">
+
+                                <input
+                                    type="number"
+                                    id="kjInput"
+                                    name="kj"
+                                    value="100"
+                                    min="0"
+                                    step="any"
+                                    inputmode="decimal"
+                                    placeholder="Enter kilojoules"
+                                    required
+                                >
+
+
+                                <span>
+                                    kJ
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <button
+                            type="submit"
+                            class="primary-button"
+                        >
+                            Convert to Calories
+                        </button>
+
+
+
+                        <button
+                            type="button"
+                            id="resetButton"
+                            class="secondary-button"
+                        >
+                            Reset
+                        </button>
+
+
+                    </form>
+
+
+
+                    <p class="privacy-note">
+
+                        Your calculation is performed directly
+                        in your browser. No information is sent
+                        to a server.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- Result Card -->
+
+                <div
+                    class="result-card"
+                    aria-live="polite"
+                >
+
+
+                    <p class="result-label">
+                        RESULT
+                    </p>
+
+
+                    <div class="result-value">
+
+
+                        <span id="calResult">
+                            23.9006
+                        </span>
+
+
+                        <span class="result-unit">
+                            Calories (kcal)
+                        </span>
+
+
+                    </div>
+
+
+
+                    <div class="result-divider">
+                    </div>
+
+
+
+                    <p id="resultSummary">
+
+                        100 kJ = 23.9006 Calories
+
+                    </p>
+
+
+
+                    <div class="quick-results">
+
+
+                        <div class="quick-result">
+
+                            <span>
+                                1 kJ
+                            </span>
+
+                            <strong>
+                                0.239006 kcal
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="quick-result">
+
+                            <span>
+                                1 Calorie
+                            </span>
+
+                            <strong>
+                                4.184 kJ
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- FORMULA SECTION -->
+        <!-- ============================= -->
+
+        <section
+            class="content-section"
+            id="formula"
+        >
+
+            <div class="container narrow">
+
+
+                <p class="section-kicker">
+                    CONVERSION FORMULA
+                </p>
+
+
+                <h2>
+                    How to Convert kJ to Calories
+                </h2>
+
+
+                <p>
+
+                    Converting kilojoules to Calories is simple.
+                    Divide the energy value in kilojoules by
+                    4.184 to get the equivalent number of
+                    kilocalories.
+
+                </p>
+
+
+
+                <div class="formula-box">
+
+
+                    <strong>
+                        Calories (kcal) = kJ ÷ 4.184
+                    </strong>
+
+
+                    <span>
+
+                        Or:
+
+                        Calories (kcal) = kJ × 0.239006
+
+                    </span>
+
+
+                </div>
+
+
+
+                <h3>
+                    kJ to Cal Examples
+                </h3>
+
+
+
+                <div class="info-grid">
+
+
+                    <article class="info-card">
+
+                        <h3>
+                            100 kJ to Calories
+                        </h3>
+
+                        <p>
+                            100 ÷ 4.184 = 23.9006 kcal
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="info-card">
+
+                        <h3>
+                            500 kJ to Calories
+                        </h3>
+
+                        <p>
+                            500 ÷ 4.184 = 119.5029 kcal
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="info-card">
+
+                        <h3>
+                            1,000 kJ to Calories
+                        </h3>
+
+                        <p>
+                            1,000 ÷ 4.184 = 239.0057 kcal
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+
+
+                <p class="source-note">
+
+                    The calculator uses the standard relationship
+                    of 1 kilocalorie (kcal) = 4.184 kilojoules (kJ).
+
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- CONVERSION TABLE -->
+        <!-- ============================= -->
+
+        <section
+            class="table-section"
+            id="table"
+        >
+
+            <div class="container narrow">
+
+
+                <p class="section-kicker">
+                    QUICK REFERENCE
+                </p>
+
+
+                <h2>
+                    kJ to Cal Conversion Table
+                </h2>
+
+
+                <p>
+
+                    Use this table for some common kilojoule
+                    to Calorie conversions.
+
+                </p>
+
+
+
+                <div class="table-wrapper">
+
+
+                    <table>
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Kilojoules (kJ)
+                                </th>
+
+                                <th>
+                                    Calories (kcal)
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+
+                        <tbody>
+
+
+                            <tr>
+                                <td>10 kJ</td>
+                                <td>2.3901 kcal</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>25 kJ</td>
+                                <td>5.9751 kcal</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>50 kJ</td>
+                                <td>11.9503 kcal</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>100 kJ</td>
+                                <td>23.9006 kcal</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>200 kJ</td>
+                                <td>47.8011 kcal</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>250 kJ</td>
+                                <td>59.7017 kcal</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>500 kJ</td>
+                                <td>119.5029 kcal</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>750 kJ</td>
+                                <td>179.2543 kcal</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>1,000 kJ</td>
+                                <td>239.0057 kcal</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>1,500 kJ</td>
+                                <td>358.5081 kcal</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>2,000 kJ</td>
+                                <td>478.0115 kcal</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>5,000 kJ</td>
+                                <td>1,195.0287 kcal</td>
+                            </tr>
+
+
+                        </tbody>
+
+
+                    </table>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- ABOUT UNITS -->
+        <!-- ============================= -->
+
+        <section class="content-section alternate">
+
+            <div class="container narrow">
+
+
+                <p class="section-kicker">
+                    ABOUT THE UNITS
+                </p>
+
+
+                <h2>
+                    What Are kJ and Calories?
+                </h2>
+
+
+                <p>
+
+                    A kilojoule (kJ) is a metric unit used to
+                    measure energy. Kilojoules are commonly used
+                    on nutrition labels in many countries.
+
+                </p>
+
+
+                <p>
+
+                    A kilocalorie (kcal) is another unit used
+                    to measure energy. In nutrition, the word
+                    “Calorie” with a capital C commonly refers
+                    to one kilocalorie.
+
+                </p>
+
+
+                <p>
+
+                    Therefore, one nutritional Calorie is equal
+                    to 4.184 kilojoules.
+
+                </p>
+
+
+                <p>
+
+                    This calculator uses the standard conversion
+                    factor to provide a quick and easy way to
+                    convert between these two energy units.
+
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- FAQ SECTION -->
+        <!-- ============================= -->
+
+        <section
+            class="faq-section"
+            id="faq"
+        >
+
+            <div class="container narrow">
+
+
+                <p class="section-kicker">
+                    FAQ
+                </p>
+
+
+                <h2>
+                    Frequently Asked Questions
+                </h2>
+
+
+
+                <div class="faq-list">
+
+
+                    <details>
+
+                        <summary>
+                            How many Calories are in 1 kJ?
+                        </summary>
+
+                        <p>
+
+                            One kilojoule is approximately
+                            equal to 0.239006 kilocalories,
+                            commonly written as Calories
+                            in nutrition.
+
+                        </p>
+
+                    </details>
+
+
+
+                    <details>
+
+                        <summary>
+                            How many kJ are in 1 Calorie?
+                        </summary>
+
+                        <p>
+
+                            One nutritional Calorie, which is
+                            equal to one kilocalorie, contains
+                            4.184 kilojoules.
+
+                        </p>
+
+                    </details>
+
+
+
+                    <details>
+
+                        <summary>
+                            What is the formula for kJ to Cal?
+                        </summary>
+
+                        <p>
+
+                            The formula is:
+
+                            Calories (kcal) = kJ ÷ 4.184.
+
+                        </p>
+
+                    </details>
+
+
+
+                    <details>
+
+                        <summary>
+                            Is Cal the same as kcal?
+                        </summary>
+
+                        <p>
+
+                            In nutrition, a capital-C Calorie
+                            generally means a kilocalorie (kcal).
+
+                        </p>
+
+                    </details>
+
+
+
+                    <details>
+
+                        <summary>
+                            How do I convert 100 kJ to Calories?
+                        </summary>
+
+                        <p>
+
+                            Divide 100 by 4.184.
+                            The result is approximately
+                            23.9006 kcal.
+
+                        </p>
+
+                    </details>
+
+
+
+                    <details>
+
+                        <summary>
+                            How do I convert Calories to kJ?
+                        </summary>
+
+                        <p>
+
+                            To convert Calories (kcal) to
+                            kilojoules, multiply the Calories
+                            by 4.184.
+
+                        </p>
+
+                    </details>
+
+
+
+                    <details>
+
+                        <summary>
+                            Does this calculator work on mobile?
+                        </summary>
+
+                        <p>
+
+                            Yes. The calculator is designed
+                            to work on desktop computers,
+                            tablets, and mobile phones.
+
+                        </p>
+
+                    </details>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ============================= -->
+    <!-- FOOTER -->
+    <!-- ============================= -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+
+            <p>
+
+                ©
+
+                <span id="year">
+                    2026
+                </span>
+
+                kJ to Cal Calculator
+
+            </p>
+
+
+            <a href="#calculator">
+                Back to Calculator ↑
+            </a>
+
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
